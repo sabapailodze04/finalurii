@@ -9,7 +9,6 @@ let likeCount = 0;
 function updateCounter() {
   counterDiv.textContent = "total Like/Dislike : " + likeCount;
 }
-
 function getJoke() {
   fetch("https://api.chucknorris.io/jokes/random")
     .then(function (response) {
@@ -19,19 +18,17 @@ function getJoke() {
       jokeDiv.textContent = data.value;
     });
 }
+fetchButton.addEventListener("click", getJoke);
 
 function increaseLike() {
   likeCount++;
   updateCounter();
 }
-
+thumbsUpButton.addEventListener("click", increaseLike);
 function decreaseLike() {
   if (likeCount > 0) {
     likeCount--;
     updateCounter();
   }
 }
-
-fetchButton.addEventListener("click", getJoke);
-thumbsUpButton.addEventListener("click", increaseLike);
 thumbsDownButton.addEventListener("click", decreaseLike);
