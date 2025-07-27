@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 40px;
+}
+#joke {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-button {
+  padding: 10px 20px;
+  margin: 0 8px;
+  cursor: pointer;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 6px;
+}
+.rating-button:hover {
+  background-color: green;
+}
+#likeDislikeCounter {
+  margin-top: 20px;
+}
